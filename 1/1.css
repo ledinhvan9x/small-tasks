@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Twinkle+Star&display=swap');
+
+:root{
+	--main-color: grey;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #9ecde7;
+	font-family: "poppins";
+}
+.card{
+	width: 320px;
+	height: 400px;
+	background-color: #0093cf;
+	margin: 120px auto;
+	border-radius: 15px;
+	padding: 20px;
+	position: relative;
+	color: white;
+}
+
+.card-heart, .card-cart{
+	font-size: 25px;
+	position: absolute;
+	left: 20px;
+	top: 15px;
+	cursor: pointer;
+}
+
+.card-cart{
+	left: unset;
+	right: 20px;
+}
+
+.card-img{
+	width: 80%;
+	margin: 0 auto;
+	max-height: 175px;
+	overflow: auto;
+	transition: 0.5s;
+}
+
+.card-img img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border: black 1px solid;
+	border-radius: 10px 10px 0 0;
+}
+
+.card-title, .card-price{
+	text-align: center;
+	font-size: 25px;
+	font-weight: bold;
+	transition: 0.5s;
+}
+
+.card-title{
+	color: var(--main-color);
+}
+
+.card-size, .card-color{
+	display: flex;
+	align-items: center;
+	margin-bottom: 7px;
+	transition: 0.5s;
+}
+
+.card-size span{
+	background-color: #dadada;
+	padding: 1px 10px;
+	border-radius: 5px;
+	margin: 0 5px;
+	color: black;
+	cursor: pointer;
+}
+
+.card-color span{
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	margin: 0 5px;
+	cursor: pointer;
+}
+
+.card-color-green{
+	background-color: green;
+}
+
+.card-color-red{
+	background-color: red;
+}
+
+.card-color-black{
+	background-color: black;
+}
+
+.card-action button{
+	border: none;
+	outline: none;
+	padding: 10px 15px;
+	border-radius: 5px;
+	font-weight: bold;
+	margin-right: 10px;
+	background-color: var(--main-color);
+	color: white;
+	transition: 0.2s;
+	cursor: pointer;
+}
+
+.card:hover .card-img{
+	transform: translateY(-40px) rotate(-20deg);
+}
+
+.card:hover .card-title, .card:hover .card-price{
+	transform: translate(-37px, -5px);
+}
+
+.card:hover .card-price{
+	transform: translate(-116px, -5px);
+}
+
+.card-size{
+	margin-top: 150px;
+}
+
+.card-size, .card-color, .card-action{
+	visibility: hidden;
+	opacity: 0;
+}
+
+.card:hover .card-size,
+.card:hover .card-color,
+.card:hover .card-action{
+	visibility: visible;
+	opacity: 1;
+}
+
+.card:hover .card-size{
+	margin-top: 0px;
+}
+
+.card-action button:hover{
+ 	transform: scale(0.85);
+}
